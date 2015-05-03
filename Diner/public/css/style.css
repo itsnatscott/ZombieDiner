@@ -15,9 +15,10 @@
 }
 .splat{
   position:fixed;
-  bottom:-35%;
-  right:-20%;
-  width: 58%;
+  bottom:-600px;
+  right:-50%;
+  width: 100%;
+  z-index: 0;
 }
 /*.detail{
   top:600px;
@@ -45,14 +46,21 @@ body, h1{
   bottom:0%;
 }
 
-nav{
+.categories{
+  text-align: center;
   position:fixed;
-  top:245px;
+  top:229px;
   left:15%;
   width: 85%;
   height: 30px;
   background-color: rgb(255,30,45);
   z-index: 13;
+}
+.cat{
+    display: inline-block;
+    margin-top: .25%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 header{
@@ -86,7 +94,7 @@ aside{
   position:relative;
   margin:10px;
   margin-left: 16%;
-  top:-2%;
+  top:-4%;
   text-align: center;
   overflow-y:auto;
   height:80%;
@@ -102,4 +110,24 @@ aside{
   width: 200px;
   border-radius: 100px;
   background-color: white;
+  z-index: 2;
+}
+
+.menuitem{
+  position:relative;
+  width:400%;
+  left: 57%;
+  top:16%;
+  height:33%;
+  background-color: mediumaquamarine;
+  z-index:1;
+}
+.descript{
+  position:relative;
+  height:33%;
+  width:400%;
+  left: 57%;
+  top:5%;
+  background-color: seagreen;
+  z-index:1;
 }
