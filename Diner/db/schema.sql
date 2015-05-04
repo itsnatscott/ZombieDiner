@@ -13,6 +13,7 @@ CREATE TABLE dishes (
   name TEXT,
   image_url TEXT,
   price INTEGER,
+  descript TEXT,
   category_id INTEGER,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

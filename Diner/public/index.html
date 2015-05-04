@@ -3,45 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Document</title>
+  <title>Rick's!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+  <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+
+    <script src = "scripts/models.js"></script>
+    <script src = "scripts/collections.js"></script>
+    <script src = "scripts/views.js"></script>
 </head>
 <body>
   <div class="container">
        <img src = "images/logo.svg" / class="logo">
+     </div>
   <header>
+  <img src = "images/zombies-eatingsmall.jpg" class="headerimage">
+    </header>
       <div class="detail"> <img class="detailpic" src = "images/brain.jpg" /></div>
-    <h1>Header</h1>
-  </header>
+
+   
+<!-- menu bar  -->
     <ul class= "categories">
       <li class = "cat"> Snacks</li>
+      <img src = "images/chewskull.gif">
       <li class = "cat"> Entrees </li>
+      <img src = "images/chewskull.gif">
       <li class = "cat"> Beverages </li>
     </ul>
+  
   <aside>
-    <h1>Sidebar</h1>
   </aside>
   <section class= "menu">
-    <h1>content</h1>
-    <ul class="pic-boxes">
-    <img src = "images/splatter.svg" / class="splat">
-      <li class="picbox">
-      <h3 class="menuitem">
-      Classic Brains
-      </h3>
-      <h4 class = "descript">with arugula friseé</h4>
-      </li>
-      <li class="picbox">
-      </li>
-      <li class="picbox">
-      </li>
-      <li class="picbox">
-      </li>
-      <li class="picbox">
-      </li>
-      <li class="picbox">
-      </li>
-       <li class="picbox">
-      </li>
-      </ul>
+       <!-- template to show menu items --> 
+<img src = "images/splatter.svg" / class="splat">
+<ul id="dishesList">
+</ul>
+<!--template-->
+<script type = "text/template" id = "dishTemplate">   
+      <img class="picbox" src= <%= dish.image_url %>>
+      <h3 class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit">Edit</button></h3>
+      <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete">Delete</button></h4> 
+    </script>
+
+<!--add item button-->
+<button id = "addNewDish" class="addItemButton">ADD NEW DISH!</button>
+<!--add item fields-->
+<div id = "addItemField" class="addItem" style = "display: none">
+<input type="text" id="newDishName"
+placeholder = "Dish Name"><br>
+<input type= "text" id="newDishPrice"
+placeholder= "numbers only"><br>
+<input type= "text" id="newDishDescript"
+placeholder = "Description"><br>
+<input type= "text" id="newDishImage"
+placeholder = "URL"><br>
+<select id="newDishCat">                    
+            <option value="1">Snack</option>
+            <option value="2">Entree</option>
+            <option value="3">Beverage</option>
+            </select>
+                   <button id = "dishAdd">add it</button>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
