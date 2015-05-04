@@ -92,7 +92,7 @@ app.get('/dishes/:id', function(req, res) {
 });
 
 app.post('/dishes', function(req, res) {
-	db.run("INSERT INTO dishes (name, price, image_url, category_id) VALUES (?,?,?,?)", req.body.name, req.body.price, req.body.image_url, req.body.category_id, function(err) {
+	db.run("INSERT INTO dishes (name, price, image_url, descript, category_id) VALUES (?,?,?,?,?)", req.body.name, req.body.price, req.body.image_url, req.body.descript, req.body.category_id, function(err) {
 		if(err) {
 			throw err;
 		}

@@ -3,13 +3,14 @@ $(document).ready(function() {
 		tagName: 'div class="itemBox"',
 		template: _.template($("#dishTemplate").html()),
 		events:{
-			"click button.addItemButton": "addItem"},
+			"click button.dishDelete": "deleteDish"
+		},
 		
 		////Button functions
 		addItem: function(){
-			this.$(".addItemField").show();
+			this.$("#addItemField").show();
 			this.$(".addItemButton").hide();
-		}
+		},
 		////////RENDER THE PAGE
 		render: function() {
 			this.$el.html(this.template({
@@ -29,14 +30,46 @@ $(document).ready(function() {
 		render: function() {
 			var dishes = this.$el;
 			dishes.html("");
-			console.log(this)
 			this.collection.each(function(dish) {
-					dishes.append(new DishView({
-						model: dish
-					}).render().$el);
-				});
+				dishes.append(new DishView({
+					model: dish
+				}).render().$el);
+			});
 			return this;
 		}
+	});
+
+	var CreateDishView = Backbone.View.extend({
+		el: "#addItemField",
+		events:{"click button#dishAdd": "createDish"},
+		createDish: function() {
+			var nameField = this.$("#newDishName");
+			var priceField = this.$("#newDishPrice");
+			var descriptField = this.$("#newDishDescript");
+			var imageField = this.$("#newDishImage");
+			var catField = this.$("#newDishCat");
+			var name = nameField.val();
+			var price = priceField.val();
+			var descript = descriptField.val();
+			var image = imageField.val();
+			var cat = catField.val();
+			console.log(price,descript,image,cat);
+
+			this.collection.create({
+				name: name,
+				price: price,
+				image_url : image,
+				descript: descript,
+				category_id: cat
+			});
+			nameField.val("");
+			priceField.val("");
+			descriptField.val("");
+			imageField.val("");
+			catField.val("1");
+
+		}
+
 	});
 
 
@@ -46,4 +79,7 @@ $(document).ready(function() {
 	new DishesView({
 		collection: entrees
 	});
+	new CreateDishView({
+		collection: entrees
+	})
 });

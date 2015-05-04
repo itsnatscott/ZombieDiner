@@ -5,6 +5,19 @@
       -ms-box-sizing: border-box;
        -o-box-sizing: border-box;
 }
+
+@font-face {
+  font-family: bad coma;
+  src: url(../fonts/bad coma.ttf);
+}
+
+.headerimage{
+  position:absolute;
+  top:-45%;
+  width: 100%;
+}
+
+
 .logo{
    float:top;
    position: fixed;
@@ -13,13 +26,7 @@
     top: 25px;
     z-index: 15;
 }
-.splat{
-  position:fixed;
-  bottom:-600px;
-  right:-50%;
-  width: 100%;
-  z-index: 0;
-}
+
 /*.detail{
   top:600px;
   position:fixed;
@@ -58,10 +65,13 @@ body, h1{
   z-index: 13;
 }
 .cat{
+  position:relative;
+  font-family: bad coma;
+  font-size: 20pt;
     display: inline-block;
-    margin-top: .25%;
-    margin-left: 10%;
-    margin-right: 10%;
+    top: 0px;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 header{
@@ -71,11 +81,7 @@ header{
   height: 204px;
   z-index: 0;
 }
-.headerimage{
-  position:absolute;
-  top:-45%;
-  width: 98%;
-}
+
 
 aside{
   position: fixed;
@@ -109,7 +115,8 @@ aside{
 
 .itemBox{
   position:relative;
-  height:210px;
+  top: -15px;
+  height:130px;
   width: 80%;
   margin-top: 50px;
 
@@ -119,10 +126,10 @@ aside{
   position:relative;
   list-style-type: none;
   /*display: inline-block;*/
-  height: 200px;
+  height: 150px;
   margin:5%;
   margin-top: 2%;
-  width: 200px;
+  width: 150px;
   border-radius: 100px;
   background-color: white;
   z-index: 2;
@@ -132,20 +139,20 @@ aside{
 .menuitem{
   text-align: center;
   position:relative;
-  width:55%;
+  width:70%;
   height:35px;
-  left: 25%;
-  top:-200px;
+  left: 19%;
+  top:-180px;
   background-color: mediumaquamarine;
   z-index:1;
 }
 .descript{
   text-align: center;
   position:relative;
-  width:55%;
+  width:70%;
   height:35px;
-  left: 25%;
-  top:-222px;
+  left: 19%;
+  top:-201px;
   background-color: seagreen;
   z-index:1;
 }
@@ -153,9 +160,18 @@ aside{
   position:fixed;
   left:88%;
   top:95%;
+  z-index: 22
 }
 .addItem{
   position:fixed;
   left:88%;
   top:85%;
+  z-index: 22
+}
+.splat{
+  position:fixed;
+  bottom:-600px;
+  right:-50%;
+  width: 100%;
+  z-index: 0;
 }
