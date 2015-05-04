@@ -61,12 +61,8 @@ var DishesView = Backbone.View.extend({
 
 var CreateDishView = Backbone.View.extend({
 	el: "#addItemField",
-	events:{"click button#dishAdd": "createDish",
-	"click button#addItemB": "addItemField"	},
-	addItemField: function(){
-		console.log("clicked")
-		$("#addItemField").toggleClass("hidden");
-	},
+	events:{"click button#dishAdd": "createDish"},
+	
 
 	createDish: function() {
 		var nameField = this.$("#newDishName");
@@ -97,6 +93,12 @@ var CreateDishView = Backbone.View.extend({
 	}
 
 });
+//toggle add item fields
+$( "#addItemB" ).click(function(){
+		console.log("clicked"),
+		$("#addItemField").toggleClass("hidden");
+});
+
 
 new DishesView({
 	collection: entrees

@@ -1,9 +1,9 @@
 *{
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-       -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
 @font-face {
@@ -34,7 +34,7 @@
   height: 100%;
   background-image:url(../images/checker.jpg);
   background-repeat: repeat-y;
-    z-index: 4;
+  z-index: 4;
 }
 
 aside{
@@ -47,12 +47,12 @@ aside{
 }
 
 .logo{
-   float:top;
-   position: fixed;
-    width:500px;
-    left: 0px;
-    top: 25px;
-    z-index: 15;
+ float:top;
+ position: fixed;
+ width:500px;
+ left: 0px;
+ top: 25px;
+ z-index: 15;
 }
 
 /*.detail{
@@ -61,184 +61,201 @@ aside{
   margin-left: -250px;
   width:30%;
   border:2px solid red;
-}*/
-.detailpic{
-  top:430px;
-  position:fixed;
-  margin-left: 57px;
-  width:25%;
-  border:4px solid red;
-  z-index: 17;
-}
+  }*/
+  .detailpic{
+    top:430px;
+    position:fixed;
+    margin-left: 57px;
+    width:25%;
+    border:4px solid red;
+    z-index: 17;
+  }
 
 
 
-body, h1{
-  margin: 0;
-}
+  body, h1{
+    margin: 0;
+  }
 
-.container{
-  position: relative;
-  bottom:0%;
-}
+  .container{
+    position: relative;
+    bottom:0%;
+  }
 
-.categories{
-  text-align: center;
-  position:fixed;
-  top:178px;
-  left:18%;
-  width: 85%;
-  height: 30px;
-  background-color: rgb(255,30,45);
-  z-index: 13;
-}
-.cat{
-  position:relative;
-  font-family: bad coma;
-  font-size: 20pt;
+  .categories{
+    text-align: center;
+    position:fixed;
+    top:178px;
+    left:18%;
+    width: 85%;
+    height: 30px;
+    background-color: rgb(255,30,45);
+    z-index: 13;
+  }
+  .cat{
+    position:relative;
+    font-family: bad coma;
+    font-size: 20pt;
     display: inline-block;
     top: 0px;
     margin-left: 3%;
     margin-right: 3%;
-}
+  }
 
-header{
-  position: fixed;
-  left:15%;
-  width: 85%;
-  height: 204px;
-  z-index: 0;
-}
+  header{
+    position: fixed;
+    left:15%;
+    width: 85%;
+    height: 204px;
+    z-index: 0;
+  }
 
 
-aside{
-  position: fixed;
-  bottom: 0%;
-  left: 0%;
-  width: 15%;
-  height: 100%;
-  background-color: skyblue;
-}
+  aside{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 15%;
+    height: 100%;
+    background-color: skyblue;
+  }
 
-.menu{
-  position: fixed;
-  width: 85%;
-  margin-left: 15%;
-  margin-top: 15%;
-  height: 100%;
-  background-color: teal;
-  z-index: 2;
-}
+  .menu{
+    position: fixed;
+    width: 85%;
+    margin-left: 15%;
+    margin-top: 15%;
+    height: 100%;
+    background-color: teal;
+    z-index: 2;
+  }
 
-#dishesList{
-  position:relative;
-  font-family: geosanslight;
-  margin:10px;
-  margin-left: 16%;
-  top:-4%;
-  overflow-y:auto;
-  height:590px;
-  width:84%;
-  z-index: 17;
-}
+  #dishesList{
+    position:relative;
+    font-family: geosanslight;
+    margin:10px;
+    margin-left: 16%;
+    top:0%;
+    overflow-y:auto;
+    height:590px;
+    width:84%;
+    z-index: 17;
+  }
 
-.itemBox{
-  position:relative;
-  top: -15px;
-  height:130px;
-  width: 80%;
-  margin-top: 50px;
+  .itemBox{
+    position:relative;
+    top: -15px;
+    height:130px;
+    width: 80%;
+    margin-top: 50px;
 
-}
+  }
 
-.picbox{
-  position:relative;
-  list-style-type: none;
-  /*display: inline-block;*/
-  height: 150px;
-  margin:5%;
-  margin-top: 2%;
-  width: 150px;
-  border-radius: 100px;
-  background-color: white;
-  z-index: 2;
-  border:4px solid red;
-}
+  .picbox{
+    position:relative;
+    list-style-type: none;
+    /*display: inline-block;*/
+    height: 150px;
+    margin:5%;
+    margin-top: 2%;
+    width: 150px;
+    border-radius: 100px;
+    background-color: white;
+    z-index: 2;
+    border:4px solid red;
+  }
 
-.menuitem{
-  font-size: 18pt;
-  text-align: center;
-  position:relative;
-  padding-top:2px;
-  width:70%;
-  height:35px;
-  left: 19%;
-  top:-180px;
-  background-color: mediumaquamarine;
-  z-index:1;
-}
-.descript{
-  text-align: center;
-  position:relative;
-  padding-top:6px;
-  width:70%;
-  height:35px;
-  left: 19%;
-  top:-204px;
-  background-color: seagreen;
-  z-index:1;
-}
-#dishEdit{
-  position:absolute;
-  color:red;
-  background: #4a0707;
-  right:4px;
-  top:9px;
-}
-#dishDelete{
-  position:absolute;
-  color:red;
-  background: #4a0707;
-  right:4px;
-  top:9px;
-}
-.addItem{
-  position:fixed;
-  left:88%;
-  top:85%;
-  z-index: 22
-}
-.hidden{
-  display: none
-}
-.splat{
-  position:fixed;
-  bottom:-600px;
-  right:-50%;
-  width: 100%;
-  z-index: 0;
-}
-.editList{
+  .menuitem{
+    font-size: 18pt;
+    text-align: center;
+    position:relative;
+    padding-top:2px;
+    width:70%;
+    height:35px;
+    left: 19%;
+    top:-180px;
+    background-color: mediumaquamarine;
+    z-index:1;
+  }
+  .descript{
+    text-align: center;
+    position:relative;
+    padding-top:6px;
+    width:70%;
+    height:35px;
+    left: 19%;
+    top:-204px;
+    background-color: seagreen;
+    z-index:1;
+    /*  box-shadow:5px 19px 30px 20px rgba(0, 0, 0, 0.5);*/
+  }
+  #dishEdit{
+    position:absolute;
+    color:red;
+    background: #4a0707;
+    right:4px;
+    top:9px;
+  }
+  #dishDelete{
+    position:absolute;
+    color:red;
+    background: #4a0707;
+    right:4px;
+    top:9px;
+  }
+
+  .splat{
+    position:fixed;
+    bottom:-600px;
+    right:-50%;
+    width: 100%;
+    z-index: 0;
+  }
+  .editList{
     position: absolute;
     top: 13px;
     left: 32px;
-}
-.editForms{
+  }
+  .editForms{
     display: inline-flex;
     position: absolute;
     top:65px;
     left:26px;
     z-index: 5
-}
-.calltoaction{
-  position: absolute;
-  width: 900px;
-  top: 14px;
-  left:168px;
-  font-size: 55pt;
-  color:darkred;
-  font-family: cold night for alligators;
-  -webkit-font-smoothing: antialiased;
-}
+  }
+  .calltoaction{
+    position: absolute;
+    width: 900px;
+    top: 14px;
+    left:168px;
+    font-size: 55pt;
+    color:darkred;
+    font-family: cold night for alligators;
+    -webkit-font-smoothing: antialiased;
+  }
 
+  #addItemB{
+    position:absolute;
+    top:59%;
+    right:.1%;
+    background:transparent;
+    border:none;
+    outline:none;
+    display:block;
+    height:200px;
+    width:200px;
+    cursor:pointer;
+    font-family: bad coma;
+    font-size: 18pt;
+    z-index:20;
+  }
+    .hidden{
+    display: none
+  }
+  .addItem{
+    position:fixed;
+    left:88%;
+    top:85%;
+    z-index: 22
+  }
 
