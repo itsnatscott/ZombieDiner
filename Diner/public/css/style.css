@@ -7,8 +7,18 @@
 }
 
 @font-face {
+  font-family: geosanslight;
+  src: url(../fonts/geo_sans_light/GeosansLight.ttf);
+}
+
+@font-face {
   font-family: bad coma;
   src: url(../fonts/bad coma.ttf);
+}
+
+@font-face {
+  font-family: cold night for alligators;
+  src: url(../fonts/coldnightforalligators.ttf);
 }
 
 .headerimage{
@@ -16,7 +26,25 @@
   top:-45%;
   width: 100%;
 }
+#checkers{
+  position: fixed;
+  bottom: 0%;
+  left: 14.1%;
+  width: 1.4%;
+  height: 100%;
+  background-image:url(../images/checker.jpg);
+  background-repeat: repeat-y;
+    z-index: 4;
+}
 
+aside{
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 15%;
+  height: 100%;
+  background-color: skyblue;
+}
 
 .logo{
    float:top;
@@ -57,8 +85,8 @@ body, h1{
 .categories{
   text-align: center;
   position:fixed;
-  top:185px;
-  left:15%;
+  top:178px;
+  left:18%;
   width: 85%;
   height: 30px;
   background-color: rgb(255,30,45);
@@ -70,8 +98,8 @@ body, h1{
   font-size: 20pt;
     display: inline-block;
     top: 0px;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 header{
@@ -104,11 +132,12 @@ aside{
 
 #dishesList{
   position:relative;
+  font-family: geosanslight;
   margin:10px;
   margin-left: 16%;
   top:-4%;
   overflow-y:auto;
-  height:565px;
+  height:590px;
   width:84%;
   z-index: 17;
 }
@@ -137,8 +166,10 @@ aside{
 }
 
 .menuitem{
+  font-size: 18pt;
   text-align: center;
   position:relative;
+  padding-top:2px;
   width:70%;
   height:35px;
   left: 19%;
@@ -149,24 +180,36 @@ aside{
 .descript{
   text-align: center;
   position:relative;
+  padding-top:6px;
   width:70%;
   height:35px;
   left: 19%;
-  top:-201px;
+  top:-204px;
   background-color: seagreen;
   z-index:1;
 }
-.addItemButton{
-  position:fixed;
-  left:88%;
-  top:95%;
-  z-index: 22
+#dishEdit{
+  position:absolute;
+  color:red;
+  background: #4a0707;
+  right:4px;
+  top:9px;
+}
+#dishDelete{
+  position:absolute;
+  color:red;
+  background: #4a0707;
+  right:4px;
+  top:9px;
 }
 .addItem{
   position:fixed;
   left:88%;
   top:85%;
   z-index: 22
+}
+.hidden{
+  display: none
 }
 .splat{
   position:fixed;
@@ -175,3 +218,27 @@ aside{
   width: 100%;
   z-index: 0;
 }
+.editList{
+    position: absolute;
+    top: 13px;
+    left: 32px;
+}
+.editForms{
+    display: inline-flex;
+    position: absolute;
+    top:65px;
+    left:26px;
+    z-index: 5
+}
+.calltoaction{
+  position: absolute;
+  width: 900px;
+  top: 14px;
+  left:168px;
+  font-size: 55pt;
+  color:darkred;
+  font-family: cold night for alligators;
+  -webkit-font-smoothing: antialiased;
+}
+
+

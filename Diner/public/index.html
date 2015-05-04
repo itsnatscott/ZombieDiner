@@ -8,59 +8,80 @@
   <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
   <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
 
-    <script src = "scripts/models.js"></script>
-    <script src = "scripts/collections.js"></script>
-    <script src = "scripts/views.js"></script>
+  <script src = "scripts/models.js"></script>
+  <script src = "scripts/collections.js"></script>
+  <script src = "scripts/views.js"></script>
 </head>
 <body>
   <div class="container">
-       <img src = "images/logo.svg" / class="logo">
-     </div>
-  <header>
+   <img src = "images/logo.svg" / class="logo">
+ </div>
+ <header>
   <img src = "images/zombies-eatingsmall.jpg" class="headerimage">
-    </header>
-      <div class="detail"> <img class="detailpic" src = "images/diner.jpg" /></div>
+</header>
+<div class="detail"> <img class="detailpic" src = "images/diner.jpg" /></div>
 
-   
+
 <!-- menu bar  -->
-    <ul class= "categories">
-      <li class = "cat"> SNACKS</li>
-      <li class = "cat"> ENTREES </li>
-      <li class = "cat"> BEVERAGES </li>
-    </ul>
-  
-  <aside>
-  </aside>
-  <section class= "menu">
-       <!-- template to show menu items --> 
-<img src = "images/splatter.svg" / class="splat">
-<ul id="dishesList">
+<ul class= "categories">
+  <li class = "cat"> SNACKS</li>
+  <li class = "cat"> ENTREES </li>
+  <li class = "cat"> BEVERAGES </li>
+  <li class = "cat"> LIST ALL </li>
 </ul>
-<!--template-->
-<script type = "text/template" id = "dishTemplate">   
-      <img class="picbox" src= <%= dish.image_url %>>
-      <h3 class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit">Edit</button></h3>
-      <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete">Delete</button></h4> 
-    </script>
+<aside id="checkers"> 
+</aside>
+<aside>
+</aside>
+<section class= "menu">
+ <!-- template to show menu items --> 
+ <img src = "images/splatter.svg" / class="splat">
+ <ul id="dishesList">
+ </ul>
+ <!--template-->
+ <script type = "text/template" id = "dishTemplate">   
+   <span class= "itemList">   <img class="picbox" src= <%= dish.image_url %>>
+    <h3 class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit" class = "button">Edit</button></h3>
+    <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete" class = "button">Delete</button></h4> </span>
+      <!--// EDIT FORMS-->
+      <span class = "editList" style= "display: none">
+        <img class="picbox" src= <%= dish.image_url %>> 
+         <div class="calltoaction"> edit this menu item </div>
+        <div class = "editForms">
+        <input type = "text" id= "newImage<%= dish.id %>"
+        value = "<%= dish.image_url %>">
+        <input type = "text" id= "newName<%= dish.id %>"
+        value = "<%= dish.name %>">
+        <input type = "text" id= "newPrice<%= dish.id %>"value = "<%= dish.price %>">
+        <input type = "text" id= "newDescript<%= dish.id %>"value = "<%= dish.descript %>">
+        <select id="newCat<%= dish.id %>">
+          <option value="1">Snack</option>
+          <option value="2">Entree</option>
+          <option value="3">Beverage</option>
+        </select>
+        <button id = "updateButton">commit</button>
+      </div>
+      </span>
+      </script>
 
-<!--add item button-->
-<button id = "addItemButton">ADD NEW DISH!</button>
-<!--add item fields-->
-<div id = "addItemField" class="addItem">
-<input type="text" id="newDishName"
-placeholder = "Dish Name"><br>
-<input type= "text" id="newDishPrice"
-placeholder= "numbers only"><br>
-<input type= "text" id="newDishDescript"
-placeholder = "Description"><br>
-<input type= "text" id="newDishImage"
-placeholder = "URL"><br>
-<select id="newDishCat">                    
-            <option value="1">Snack</option>
-            <option value="2">Entree</option>
-            <option value="3">Beverage</option>
-            </select>
-                   <button id = "dishAdd">add it</button>
+      <!--add item button-->
+      <button id = "addItemB"; class="addItem">ADD NEW</button>
+      <!--add item fields-->
+      <div id = "addItemField" class="addItem">
+        <input type="text" id="newDishName"
+        placeholder = "Dish Name"><br>
+        <input type= "text" id="newDishPrice"
+        placeholder= "numbers only"><br>
+        <input type= "text" id="newDishDescript"
+        placeholder = "Description"><br>
+        <input type= "text" id="newDishImage"
+        placeholder = "URL"><br>
+        <select id="newDishCat">                    
+          <option value="1">Snack</option>
+          <option value="2">Entree</option>
+          <option value="3">Beverage</option>
+        </select>
+        <button id = "dishAdd">add it</button>
 
 
 
@@ -71,5 +92,5 @@ placeholder = "URL"><br>
 
 
 
-</body>
-</html>
+      </body>
+      </html>
