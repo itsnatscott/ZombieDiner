@@ -14,12 +14,10 @@ $(document).ready(function() {
 			var newPrice = this.$("#newPrice"+ this.model.id).val();
 			var newImage = this.$("#newImage"+ this.model.id).val();
 			var newDescript = this.$("#newDescript"+ this.model.id).val();
-			var newCat = this.$("newCat"+ this.model.id).val();
 			this.model.set({name: newName,
 				price: newPrice,
 				image_url : newImage,
-				descript: newDescript,
-				category_id: newCat});
+				descript: newDescript});
 			this.model.save();
 		},
 
@@ -55,6 +53,7 @@ var DishesView = Backbone.View.extend({
 				model: dish
 			}).render().$el);
 		});
+		console.log("rerendered")
 		return this;
 	}
 });
@@ -88,10 +87,43 @@ var CreateDishView = Backbone.View.extend({
 		priceField.val("");
 		descriptField.val("");
 		imageField.val("");
-		catField.val("1");
+		catField.val("");
 
 	}
 
+});
+//categories
+$("#snack").click(function(){
+	console.log("snax!")
+	$("#snack").toggleClass("cat2");
+	document.getElementById("entree").className = "cat";
+	document.getElementById("bev").className = "cat";
+});
+$("#entree").click(function(){
+	console.log("trees!")
+	$("#entree").toggleClass("cat2");
+	document.getElementById("snack").className = "cat";
+	document.getElementById("bev").className = "cat";
+	new DishesView({
+	collection: entrees});
+	$(".itemList.1").unwrap().remove();
+	$(".itemList.3").unwrap().remove();
+});	
+$("#bev").click(function(){
+	console.log("dranx!")
+	$("#bev").toggleClass("cat2");
+	document.getElementById("snack").className = "cat";
+	document.getElementById("entree").className = "cat";
+	new DishesView({
+	collection: entrees});
+	$(".itemList.2").unwrap().remove();;
+	$(".itemList.1").unwrap().remove();
+	
+});	
+//Blow up picture
+$(".menuitem").click(function(){
+	console.log("click")
+	$(".menuitem").toggleClass("hidden")
 });
 //toggle add item fields
 $( "#addItemB" ).click(function(){

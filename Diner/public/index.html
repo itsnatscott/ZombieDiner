@@ -24,10 +24,9 @@
 
 <!-- menu bar  -->
 <ul class= "categories">
-  <li class = "cat"> SNACKS</li>
-  <li class = "cat"> ENTREES </li>
-  <li class = "cat"> BEVERAGES </li>
-  <li class = "cat"> LIST ALL </li>
+  <button class = "cat" id="snack"> SNACKS</button>
+  <button class = "cat" id="entree"> ENTREES </button>
+  <button class = "cat" id="bev"> BEVERAGES </button>
 </ul>
 <aside id="checkers"> 
 </aside>
@@ -39,10 +38,11 @@
  <ul id="dishesList">
  </ul>
  <!--template-->
- <script type = "text/template" id = "dishTemplate">   
-   <span class= "itemList">   <img class="picbox" src= <%= dish.image_url %>>
-    <h3 class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit" class = "button">Edit</button></h3>
-    <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete" class = "button">Delete</button></h4> </span>
+ <script type = "text/template" id = "dishTemplate">
+   <span class= "itemList <%=dish.category_id%>">   <img class="picbox" src= <%= dish.image_url %>>
+    <button class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit" class = "button">Edit</button></button>
+    <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete" class = "button">Delete</button></h4> 
+    </span>
       <!--// EDIT FORMS-->
       <span class = "editList" style= "display: none">
         <img class="picbox" src= <%= dish.image_url %>> 
@@ -54,11 +54,6 @@
         value = "<%= dish.name %>">
         <input type = "text" id= "newPrice<%= dish.id %>"value = "<%= dish.price %>">
         <input type = "text" id= "newDescript<%= dish.id %>"value = "<%= dish.descript %>">
-        <select id="newCat<%= dish.id %>">
-          <option value="1">Snack</option>
-          <option value="2">Entree</option>
-          <option value="3">Beverage</option>
-        </select>
         <button id = "updateButton">commit</button>
       </div>
       </span>

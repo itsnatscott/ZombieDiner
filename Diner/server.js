@@ -108,7 +108,7 @@ app.post('/dishes', function(req, res) {
 
 app.put('/dishes/:id', function(req, res) {
 	var id = req.params.id;
-	db.run("UPDATE dishes SET name = ?, image_url = ?, price = ?, descript = ?, category_id = ? WHERE id = ?", req.body.name, req.body.image_url, req.body.price, req.body.descript, req.body.category_id, id, function (err) {
+	db.run("UPDATE dishes SET name = ?, image_url = ?, price = ?, descript = ?, WHERE id = ?", req.body.name, req.body.image_url, req.body.price, req.body.descript, id, function (err) {
 		if(err) {
 			throw err;
 		}
