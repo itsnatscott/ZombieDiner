@@ -44,8 +44,7 @@
     <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete" class = "button">Delete</button></h4> 
     </span>
       <!--// EDIT FORMS-->
-      <span class = "editList" style= "display: none">
-        <img class="picbox" src= <%= dish.image_url %>> 
+      <span class = "editList" style= "display: none"> 
          <div class="calltoaction"> edit this menu item </div>
         <div class = "editForms">
         <input type = "text" id= "newImage<%= dish.id %>"
@@ -56,6 +55,7 @@
         <input type = "text" id= "newDescript<%= dish.id %>"value = "<%= dish.descript %>">
         <button id = "updateButton">commit</button>
       </div>
+      <img class="picbox" src= <%= dish.image_url %>>
       </span>
       </script>
       <!--add item button-->

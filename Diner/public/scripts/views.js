@@ -14,6 +14,9 @@ $(document).ready(function() {
 			var newPrice = this.$("#newPrice"+ this.model.id).val();
 			var newImage = this.$("#newImage"+ this.model.id).val();
 			var newDescript = this.$("#newDescript"+ this.model.id).val();
+			document.getElementById("entree").className = "cat";
+			document.getElementById("snack").className = "cat";
+			document.getElementById("bev").className = "cat";
 			this.model.set({name: newName,
 				price: newPrice,
 				image_url : newImage,
@@ -93,42 +96,39 @@ var CreateDishView = Backbone.View.extend({
 
 });
 //categories
+
 $("#snack").click(function(){
-	console.log("snax!")
-	$("#snack").toggleClass("cat2");
+	$(".detailpic").attr('src','images/bartender.jpg')
+	$(".itemList").parent().css('display', 'none');
+	$("#snack").toggleClass("cat2")
 	document.getElementById("entree").className = "cat";
 	document.getElementById("bev").className = "cat";
+	$(".itemList.1").parent().show()
 });
 $("#entree").click(function(){
-	console.log("trees!")
+	$(".itemList").parent().css('display', 'none');
 	$("#entree").toggleClass("cat2");
 	document.getElementById("snack").className = "cat";
 	document.getElementById("bev").className = "cat";
-	new DishesView({
-	collection: entrees});
-	$(".itemList.1").unwrap().remove();
-	$(".itemList.3").unwrap().remove();
+	$(".itemList.2").parent().show();
 });	
 $("#bev").click(function(){
-	console.log("dranx!")
+	$(".itemList").parent().css('display', 'none');
 	$("#bev").toggleClass("cat2");
 	document.getElementById("snack").className = "cat";
 	document.getElementById("entree").className = "cat";
-	new DishesView({
-	collection: entrees});
-	$(".itemList.2").unwrap().remove();;
-	$(".itemList.1").unwrap().remove();
-	
+	$(".itemList.3").parent().show();
+
 });	
 //Blow up picture
-$(".menuitem").click(function(){
-	console.log("click")
-	$(".menuitem").toggleClass("hidden")
-});
+// $(".menuitem").click(function(){
+// 	console.log("click")
+// 	$(".menuitem").parent.toggleClass("hidden")
+// });
 //toggle add item fields
 $( "#addItemB" ).click(function(){
-		console.log("clicked"),
-		$("#addItemField").toggleClass("hidden");
+	console.log("clicked"),
+	$("#addItemField").toggleClass("hidden");
 });
 
 
