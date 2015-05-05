@@ -32,15 +32,17 @@
 </aside>
 <aside>
 </aside>
-<section class= "menu">
+<section class="menu">
+   </section>
+<section class= "menu2">
  <!-- template to show menu items --> 
- <img src = "images/splatter.svg" / class="splat">
  <ul id="dishesList">
  </ul>
  <!--template-->
  <script type = "text/template" id = "dishTemplate">
-   <span class= "itemList <%=dish.category_id%>">   <img class="picbox" src= <%= dish.image_url %>>
-    <button class= "menuitem">$<%=dish.price%> <%= dish.name %><button id = "dishEdit" class = "button">Edit</button></button>
+ <span class= "itemList <%=dish.category_id%>">   <div class="picbox" style="background:url(images/lense.gif),url(<%= dish.image_url %>);background-size: cover;">
+ </div>
+   <button class= "menuitem"><%= dish.name %>.......<strong>$<%=dish.price%></strong><button id = "dishEdit" class = "button">Edit</button></button>
     <h4 class = "descript"> <%= dish.descript %><button id = "dishDelete" class = "button">Delete</button></h4> 
     </span>
       <!--// EDIT FORMS-->
@@ -59,7 +61,7 @@
       </span>
       </script>
       <!--add item button-->
-      <button id = "addItemB";>ADD NEW</button>
+      <button id = "addItemB";></button>
       <!--add item fields-->
       <div id = "addItemField" class="addItem hidden">
         <input type="text" id="newDishName"
@@ -76,6 +78,8 @@
           <option value="3">Beverage</option>
         </select>
         <button id = "dishAdd">add it</button>
+      </div>
+    </section>
 
 
 
