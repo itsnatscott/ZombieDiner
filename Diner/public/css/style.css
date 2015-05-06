@@ -53,12 +53,15 @@
   width:30%;
   border:2px solid red;
   }*/
-  .detailpic{
+  .detail{
     top:450px;
     position:fixed;
     margin-left: 90px;
     width:300px;
-    height:auto;
+    height:300px;
+    background-image:url(../images/lense.gif),url(../images/diner.jpg);
+    background-blend-mode: multiply;
+    background-size: 150%;
     border:4px solid red;
     z-index: 20;
   }
@@ -140,9 +143,9 @@
     height: 100%;
     background-color: rgb(0,90,90) ;
     z-index: 2;
-    background-image:url(../images/splatter2.svg),url(../images/splatter3.svg);
+    background-image:url(../images/splatter2.svg);
     background-size: 100%;
-    background-blend-mode: multiply;
+/*    background-blend-mode: multiply;*/
     background-position: 100% 100%;
   }
   .menu2{
@@ -152,7 +155,7 @@
     margin-top: 15%;
     height: 100%;
     z-index: 2;
-    background-image:url(../images/splatter3.svg),url(../images/splatter3.svg);
+    background-image:url(../images/splatter3.svg);
     background-color: rgba(0,90,90,.4) ;    
     background-size: 100%;
     background-position: 100% 100%;
@@ -265,11 +268,12 @@
     position: absolute;
     width: 900px;
     top: 14px;
-    left:168px;
+    left:75px;
     font-size: 55pt;
     color:darkred;
     font-family: cold night for alligators;
     -webkit-font-smoothing: antialiased;
+    z-index: 11
   }
 
   #addItemB{
@@ -301,10 +305,12 @@
     position:fixed;
     margin-left: 90px;
     width:300px;
-    height:auto;
+    height:300px;
     background-image:url(../images/lense.gif),url(../images/snack.jpg);
-    background-size: 100%;
+    background-size: 150%;
+    background-blend-mode: multiply;
     border:4px solid red;
+    background-position: 50% 100%;
     z-index: 20;
   }
   .entree{
@@ -312,10 +318,12 @@
     position:fixed;
     margin-left: 90px;
     width:300px;
-    height:auto;
+    height:300px;
     background-image:url(../images/lense.gif),url(../images/entree.jpg);
-    background-size: 100%;
+    background-size: 150%;
+    background-blend-mode: multiply;
     border:4px solid red;
+    background-position: 100% 105%;
     z-index: 20;
   }
   .bev{
@@ -323,9 +331,11 @@
     position:fixed;
     margin-left: 90px;
     width:300px;
-    height:auto;
+    height:300px;
     background-image:url(../images/lense.gif),url(../images/bartender.jpg);
-    background-size: 100%;
+    background-size: 150%;
+    background-blend-mode: multiply;
     border:4px solid red;
+    background-position: 90% 105%;
     z-index: 20;
   }

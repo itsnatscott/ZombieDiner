@@ -100,16 +100,18 @@ var CreateDishView = Backbone.View.extend({
 
 $("#snack").click(function(){
 	// $(".detailpic").attr('src','images/snack.jpg')
-	$(".detailpic").toggleClass("snack").fadeIn();
+	document.getElementById("detpic").className = "snack";
 	$(".itemList").parent().fadeOut();;
 	$("#snack").toggleClass("cat2")
 	document.getElementById("entree").className = "cat";
 	document.getElementById("bev").className = "cat";
 	$(".itemList.1").parent().fadeIn();
+	
 });
 $("#entree").click(function(){
 	// $(".detailpic").attr('src','images/entree.jpg')
-	$(".detailpic").toggleClass("entree").fadeIn();
+	document.getElementById("detpic").className = "entree";
+	// $(".detail").switchClass("entree").fadeIn();
 	$(".itemList").parent().fadeOut();;
 	$("#entree").toggleClass("cat2");
 	document.getElementById("snack").className = "cat";
@@ -118,7 +120,8 @@ $("#entree").click(function(){
 });	
 $("#bev").click(function(){
 	// $(".detailpic").attr('src','images/bartender.jpg').fadeIn();
-	$(".detailpic").toggleClass("bev").fadeIn();
+	document.getElementById("detpic").className = "bev";
+	// $(".detail").switchClass("bev").fadeIn();
 	$(".itemList").parent().fadeOut();
 	$("#bev").toggleClass("cat2");
 	document.getElementById("snack").className = "cat";
