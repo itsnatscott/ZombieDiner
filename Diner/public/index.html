@@ -13,22 +13,22 @@
   <script src = "scripts/views.js"></script>
 </head>
 <body>
-  <div class="container">
-   <img src = "images/logo.svg" / class="logo">
- </div>
  <header>
+   <div class="container">
+ </div>
   <img src = "images/zombies-eatingsmall.jpg" class="headerimage">
+  <ul class= "categories">
+  <button class = "cat" id="snack"> SNACKS</button>
+  <button class = "cat" id="entree"> ENTREES </button>
+  <button class = "cat" id="bev"> BEVERAGES </button>
+</ul>
 </header>
 <div class="detail" id="detpic"> <!-- <img class="detailpic"> --></div>
 
 
 <!-- menu bar  -->
-<ul class= "categories">
-  <button class = "cat" id="snack"> SNACKS</button>
-  <button class = "cat" id="entree"> ENTREES </button>
-  <button class = "cat" id="bev"> BEVERAGES </button>
-</ul>
 <aside id="checkers"> 
+   <img src = "images/logo.svg" / class="logo">
 </aside>
 <aside>
 </aside>
@@ -37,6 +37,7 @@
  <!-- template to show menu items --> 
  <ul id="dishesList">
  </ul>
+<div class="splat"></div>
  <!--template-->
  <script type = "text/template" id = "dishTemplate">
  <span class= "itemList <%=dish.category_id%>">   <div class="picbox" style="background:url(images/lense.gif),url(<%= dish.image_url %>);background-size: cover;">
@@ -59,6 +60,7 @@
       <img class="picbox" src= <%= dish.image_url %>>
       </span>
       </script>
+          </section>
       <!--add item button-->
       <button id = "addItemB";></button>
       <!--add item fields-->
@@ -78,7 +80,7 @@
         </select>
         <button id = "dishAdd">add it</button>
       </div>
-    </section>
+
 
 
 

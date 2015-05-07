@@ -22,8 +22,9 @@
 }
 
 .headerimage{
-  position:absolute;
-  top:-45%;
+  position:fixed;
+  top:0%;
+  height:39%;
   width: 100%;
 }
 #checkers{
@@ -38,12 +39,11 @@
 }
 
 .logo{
- float:top;
- position: fixed;
- width:500px;
- left: 0px;
- top: 25px;
- z-index: 19;
+ position: absolute;
+ width:2000%;
+ left: -800%;
+ top: 8%;
+ z-index: 30;
 }
 
 /*.detail{
@@ -75,14 +75,15 @@
   .container{
     position: relative;
     bottom:0%;
+    z-index: 20;
   }
 
   .categories{
     text-align: center;
-    position:fixed;
-    top:196px;
-    left:18%;
-    width: 85%;
+    position:absolute;
+    bottom:-3%;
+    left:5%;
+    width: 100%;
     height: 30px;
     background-color: rgb(255,30,45);
     z-index: 18;
@@ -119,7 +120,7 @@
     position: fixed;
     left:15%;
     width: 85%;
-    height: 204px;
+    height: 44%;
     z-index: 15;
   }
 
@@ -248,6 +249,7 @@
     position:fixed;
     bottom:-40%;
     right: 0%;
+    background-image:url(../images/splatter.svg);
     width: 85%;
     z-index: 0;
     

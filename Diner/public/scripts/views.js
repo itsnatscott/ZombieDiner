@@ -93,8 +93,8 @@ var CreateDishView = Backbone.View.extend({
 		imageField.val("");
 		catField.val("");
 		showAll();
+		$("#addItemField").fadeOut;
 	}
-
 });
 //categories
 
@@ -130,8 +130,7 @@ $("#bev").click(function(){
 
 });	
 $( "#addItemB" ).dblclick(function(){
-	console.log("clicked"),
-	$("#addItemField").toggleClass("hidden");
+	$("#addItemField").toggleClass("hidden")
 });
 showAll = function(){
 	document.getElementById("snack").className = "cat";
