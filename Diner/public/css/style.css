@@ -24,7 +24,7 @@
 .headerimage{
   position:fixed;
   top:0%;
-  height:39%;
+  height:248px;
   width: 100%;
 }
 #checkers{
@@ -39,10 +39,11 @@
 }
 
 .logo{
- position: absolute;
- width:5%;
- left: 10%;
- z-index: 30;
+  position: absolute;
+  width: 500px;
+  top: 50px;
+  left: -200px;
+  z-index: 30;
 }
 
 /*.detail{
@@ -72,30 +73,25 @@
   }
 
   .container{
-    position: fixed;
-    background-size: 32% 55%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:  100%;
-    top:10%;
+    position: relative;
+    bottom:0%;
     z-index: 20;
-    background-image:url(../images/logo.svg)
   }
 
   .categories{
-    text-align: center;
-    position:absolute;
-    bottom:-3%;
-    left:5%;
-    width: 100%;
-    height: 30px;
-    background-color: rgb(255,30,45);
-    z-index: 18;
+      text-align: center;
+  position: absolute;
+  top: 224px;
+  left: 5%;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(255,30,45);
+  z-index: 18;
   }
   .cat{
     position:relative;
     font-family: bad coma;
-    font-size: inherit;
+    font-size: 20pt;
     display: inline-block;
     background:transparent;
     border:none;

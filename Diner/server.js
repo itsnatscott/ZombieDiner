@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var sqlite3 = require("sqlite3").verbose();
 var cors = require('cors');
-
+var ejs = require('ejs');
 var db = new sqlite3.Database("db/diner.db");
 var app = express();
 
@@ -10,6 +10,7 @@ app.use(cors());
 app.use(bodyParser.json({ extended: false }));
 
 app.use(express.static('public'));
+
 app.get('/', function(req, res){
 	res.render('index.html')
 });
@@ -130,5 +131,5 @@ app.delete('/dishes/:id', function(req, res) {
 	});
 });
 
-app.listen(3000);
-console.log('Listening on port 3000');
+app.listen(3002);
+console.log('Listening on port 3002');
